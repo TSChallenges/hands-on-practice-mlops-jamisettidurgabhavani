@@ -11,8 +11,8 @@ def preprocess_data(input_path: str, output_path: str):
     df = pd.read_csv(input_path)
     
     # Drop Customer ID column if present
-    if 'CustomerID' in df.columns:
-        df.drop(columns=['CustomerID'], inplace=True)
+
+    df.drop(columns=['CustomerId','RowNumber'], inplace=True)
     
     # Handling missing values
     df.fillna(df.median(numeric_only=True), inplace=True)
