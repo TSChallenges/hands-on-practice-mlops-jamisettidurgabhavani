@@ -11,8 +11,8 @@ def train_model(data_path: str, model_path: str):
     data = pd.read_csv(data_path)
     
     # Split data into features and target
-    X = data.drop(columns=['Churn'])  # Assuming 'Churn' is the target variable
-    y = data['Churn']
+    X = data.drop(columns=['Exited'])  # Assuming 'Churn' is the target variable
+    y = data['Exited']
     
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -38,4 +38,4 @@ def train_model(data_path: str, model_path: str):
     print(f'Model saved to {model_path}')
 
 if __name__ == "__main__":
-    train_model("processed_data.csv", "model.pkl")
+    train_model("data/processed_data.csv", "models/model.pkl")
