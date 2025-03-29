@@ -20,4 +20,4 @@ def train_model(data_path: str, model_path: str):
     # Save model inside model directory
 
 if __name__ == "__main__":
-    train_model()
+    train_model("processed_data_path", "model_path")
