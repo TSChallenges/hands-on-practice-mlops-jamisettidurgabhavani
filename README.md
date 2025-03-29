@@ -5,7 +5,7 @@
 ### Exercise-1: Train the model for Customer Churn prediction
 
 - Install required packages using `requirements.txt`
-- Run the training script `train_model.py`
+- Run the training script `train_model.py'
 - Check the trained model saved in `models` directory
 
 ### Exercise-2: Develop test cases

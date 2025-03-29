@@ -52,7 +52,7 @@ test_data.to_csv('data/test.csv', index=False)
 # Model Training
 # Create Random Forest Classifier model with n_estimators=100
 rf_model = RandomForestClassifier(n_estimators=100)
-rf_model.fit(X_train, y_train.values.ravel())
+rf_model.fit(X_train, y_train)
 
 # Evaluate the model performance on test set
 y_pred = rf_model.predict(X_test)
