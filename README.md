@@ -1,19 +1,37 @@
-# Hands on
-## CI/CD Pipeline for Customer Churn data using GitHub Actions / gitlab
+# Hands-on Practice MLOps (Ungraded)
 
-##  Project Overview  
-This Hands-on implements a **CI/CD pipeline using GitHub Actions** to process **Customer Churn data** and train a machine learning model 
+## Attempt below exerices with the provided Customer Churn Data
 
-The pipeline includes:  
-- **Data Preprocessing**: Cleaning & transforming raw data.  
-- **Model Training**: Training a classification model.  
-- **Automated Testing**: Using `pytest` for test cases.  
-- **CI/CD Integration**: Automating workflow using GitHub Actions.  
+### Exercise-1: Train the model for Customer Churn prediction
 
+- Install required packages using `requirements.txt`
+- Run the training script `train_model.py`
+- Check the trained model saved in `models` directory
 
-#### Column Description:
+### Exercise-2: Develop test cases
+
+- Install required testing package - `pytest`
+- Write your test case in `tests/test_prediction.py` file to check model accuracy > 0.8
+- Return a custom error response when the test case fails
+
+### Exercise-3: Create API endpoint
+
+- Install required packages - `fastapi`, `uvicorn`, etc
+- Write your code in `app.py` file to create a `predict/` endpoint using FastAPI that will take data from user and returns the model prediction
+- You can use Swagger UI to test the endpoint which is avaialble to `/docs` endpoint once you start the FastAPI application
+
+### Exercise-4: Dockerize the application
+
+- Create a `Dockerfile` to containerize your FastAPI application
+- Build a docker image using the Dockerfile
+- Start a container and test if the application is working fine
+- Push the docker image on your DockerHub account
+
+---
+
+## Dataset Description:
+
 The dataset you'll be working with is a customer dataset from a **Credit Card company**, which includes the following features:
-
 
 - **RowNumber:** corresponds to the record (row) number and has no effect on the output.
 - **CustomerId:** contains random values and has no effect on customer leaving the bank.
@@ -31,51 +49,18 @@ The dataset you'll be working with is a customer dataset from a **Credit Card co
 - **Exited:** whether or not the customer left the bank. (0=No,1=Yes)
 
 ---
- 
-## Assignment Tasks
-
-**1. Understanding the given files**
-
-You are provided with the following:
-* **Dataset (`data/customer_churn.csv`)**: Required for preprocessing and model training.
-* **Preprocessing script (`preprocessing.py`)**: Cleans and prepares the data.
-* **Model training script (`train_model.py`)**: Trains and saves a machine learning model.
-* **Test scripts (`tests/test_pipeline.py`)**: Validates the preprocessing and model performance.
-
-**2. Setting Up the CI/CD Pipeline**
-
-You need to create a GitHub Actions workflow to automate the ML pipeline when code is pushed to the main branch or a pull request is made.
-
-**Steps to Include in ml_pipeline.yml**
-* Trigger the Workflow: Run the pipeline on push and pull requests to the main branch.
-* Set Up the Environment: Use Ubuntu-latest as the runner.
-* Setup Python 3.8 and install required dependencies (pandas, numpy, scikit-learn, pytest).
-* **Run Preprocessing**: Execute `preprocessing.py` to clean and transform the dataset.
-* **Train the Model**: Run `train_model.py` to train and save the model.
-* **Run Test Cases**: Use `pytest` to verify correctness.
-
-**3. Implementing the Workflow**
-
-You need to define the `ml_pipeline.yml` file in the `.github/workflows/` directory, ensuring it includes:
-
-* Checking out the repository
-* Setting up python
-* Installing dependencies
-* Running preprocessing and model training
-* Executing tests
-
----
 
 ## Submission Guidelines
-After completing the assignment and developing the solution code in your system, commit and push the changes to this repository. 
+
+After completing the exercises and developing the solution, commit and push the changes to this repository. 
   - Stage your changes and commit the files:
     ```
     git add .
-    git commit -m "challenge Completed "
+    git commit -m "Exercies Completed"
     ```
   - Push your changes to the GitHub repository:
     ```
     git push
     ```
 
-Good luck, and happy coding!
+Good luck, and happy learning!
