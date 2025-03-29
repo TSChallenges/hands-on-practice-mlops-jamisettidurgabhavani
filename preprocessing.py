@@ -12,4 +12,4 @@ def preprocess_data(input_path: str, output_path: str):
     # Save processed data
     # ToDo
 if __name__ == "__main__":
-    preprocess_data()
+    preprocess_data("Raw data path", "path to store processed data")
