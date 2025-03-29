@@ -1,4 +1,4 @@
-# Assignment-6
+# Hands on
 ## CI/CD Pipeline for Customer Churn data using GitHub Actions / gitlab
 
 ##  Project Overview  
